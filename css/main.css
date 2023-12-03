@@ -1,0 +1,190 @@
+*{
+    text-transform: capitalize;
+font-family: 'Alegreya', serif;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-family: 'Amatic SC', sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Permanent Marker', cursive;
+    font-family: 'Playfair Display', serif;
+}
+
+:root{
+    --main-color:#FFC436;
+    --section-color:black;
+}
+#home{
+    background-image: url(../images/home.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+}
+#home::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0, 0, 0.5);
+    z-index: -1;
+
+
+}
+h1{
+    font-size: 4rem;
+    color: var(--main-color);
+
+}
+.title h3,h2{
+    color: var(--main-color);
+    font-size: 2rem;
+}
+h6,h4,h3{
+    color: var(--main-color);
+}
+h5{
+  color: var(--main-color);
+    letter-spacing: 5px;
+    font-family: 'Playfair Display', serif;
+
+}
+
+#home .container .title p{
+    font-size: 2rem;
+    color: white;
+}
+
+section{
+    background-color: var(--section-color);
+
+}
+#about .container .img::before{
+    content: "";
+        height: 110%;
+        width: 90px;
+        background-color: var(--main-color);
+        position: absolute;
+        z-index: -1;
+        top: -21px;
+        left: -25px;
+    }
+#team .container .card .card-footer p{
+    letter-spacing: 5px;
+}
+#fitness .container .item .layer{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+    transform: translateX(-1000px);
+    transition: 0.5s;
+}
+#fitness .container .item:hover .layer{
+    transform: translateX(0);
+}
+#team .container .item{
+    border: 2px solid #FFC436;
+    border-bottom: transparent;
+}
+#contact .container{
+    background-image: url(../images/contact.jpg);
+    background-position: center;
+    background-size: cover;
+    border: 1px solid var(--main-color) ;
+}
+#contact .container::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(0,0, 0, 0.7);
+}
+#contact .container a{
+    display: block;
+    text-decoration: none;
+padding: 10px 0;
+    color: white;
+    transition: 0.4s;
+}
+#contact .container a:hover{
+    transform: translateX(8px);
+    color: #FFC436;
+
+}
+
+#contact .container i{
+    color: var(--main-color);
+}
+#contact .container h4 {
+    padding: 5px 0;
+}
+#contact .container .icon{
+    width: 80px;
+}
+#contact .container .icon i{
+    color: white;
+    transition: 0.5s;
+}
+#contact .container .icon:hover i{
+    color: var(--main-color);
+    transform: scale(1.2);
+    font-weight: bold;
+}
+#pricing{
+    position: relative;
+}
+#pricing::before{
+    content: "";
+ background-color: var(--main-color);
+ width: 100%;
+    height: 90px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(50%);
+}
+#pricing .container .item{
+    height: 500px;
+
+}
+#pricing .container .layer1
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom: 0;
+    background-color: rgba(0,0, 0, 0.5);
+    transition: 0.7s;
+    z-index: 3;
+}
+#pricing .container .layer2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0, 0, 0.7);
+    z-index: 2;
+    transition-delay: 0.3s;
+    transition: 0.6s;
+    transform: translateY(-1000px);
+}
+
+#pricing .container .item:hover .layer1 {
+    transform: translateX(-1000px);
+}
+#pricing .container .item:hover .layer2{
+    transform: translateY(0);
+}
+@media screen and (max-width: 992px){
+    #pricing::before{
+        display: none;
+    }
+
+}
