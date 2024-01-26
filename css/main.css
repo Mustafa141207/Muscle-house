@@ -8,6 +8,38 @@ font-family: 'Alegreya', serif;
     font-family: 'Playfair Display', serif;
 }
 
+#sideBar {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 111111;
+    display: flex;
+
+}
+
+#innerSide {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    text-align: center;
+
+}
+
+#sideBar i {
+    transform: translateY(100%);
+    align-self: flex-start;
+    color: var(--main-color);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.9);
+    cursor: pointer;
+
+}
+
+span.colorBox {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
 :root{
     --main-color:#FFC436;
     --section-color:black;
@@ -55,11 +87,32 @@ h5{
     font-size: 2rem;
     color: white;
 }
-
-section{
-    background-color: var(--section-color);
-
+#btnUp {
+    background-color: var(--main-color);
+    color: white;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 400000;
+    display: none;
 }
+
+#imgBox img {
+    width: 150px;
+    display: block;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+#about,
+#team,
+#fitness,
+#team,
+#contact,
+#pricing {
+    background-color: var(--section-color);
+}
+
 #about .container .img::before{
     content: "";
         height: 110%;
